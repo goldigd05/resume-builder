@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="light-mode mesho-theme">
+  <header>
+    <nav>
+      <h1>Smart Resume Builder</h1>
+      <ul>
+        <li><a href="index.html">Build</a></li>
+        <li><a href="resume.html">Preview</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button id="themeToggle">🌙</button>
+          <select id="themeSelector">
+            <option value="mesho-theme">Mesho</option>
+            <option value="indigo-theme">Indigo</option>
+            <option value="teal-theme">Teal</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <form id="resumeForm">
+      <h2>Create Your Resume</h2>
+
+      <label>Upload Photo</label>
+      <input type="file" id="photo" accept="image/*" />
+
+      <input type="text" id="fullName" placeholder="Full Name" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="tel" id="phone" placeholder="Phone" required />
+      <input type="text" id="address" placeholder="Address" required />
+
+      <input type="url" id="linkedin" placeholder="LinkedIn URL" />
+      <input type="url" id="github" placeholder="GitHub URL" />
+
+      <h3>Education</h3>
+      <div id="educationSection">
+        <textarea class="eduInput" placeholder="Education Details" required></textarea>
+      </div>
+      <button type="button" onclick="addSection('educationSection', 'eduInput')">Add More</button>
+
+      <h3>Experience</h3>
+      <div id="experienceSection">
+        <textarea class="expInput" placeholder="Experience Details" required></textarea>
+      </div>
+      <button type="button" onclick="addSection('experienceSection', 'expInput')">Add More</button>
+
+      <h3>Projects</h3>
+      <div id="projectSection">
+        <textarea class="projInput" placeholder="Project Details" required></textarea>
+      </div>
+      <button type="button" onclick="addSection('projectSection', 'projInput')">Add More</button>
+
+      <h3>Certifications</h3>
+      <div id="certSection">
+        <textarea class="certInput" placeholder="Certification Details"></textarea>
+      </div>
+      <button type="button" onclick="addSection('certSection', 'certInput')">Add More</button>
+
+      <input type="text" id="skills" placeholder="Skills (comma separated)" required />
+      <button type="submit">Generate Resume</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>© 2025 Goldi | Created with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

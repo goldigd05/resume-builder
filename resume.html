@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume Preview</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body class="light-mode mesho-theme">
+  <header>
+    <nav>
+      <h1>Smart Resume Builder</h1>
+      <ul>
+        <li><a href="index.html">Build</a></li>
+        <li><a href="resume.html">Preview</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <button id="themeToggle">🌙</button>
+          <select id="themeSelector">
+            <option value="mesho-theme">Mesho</option>
+            <option value="indigo-theme">Indigo</option>
+            <option value="teal-theme">Teal</option>
+          </select>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="resume-section">
+      <h2>Your Resume Preview</h2>
+      <div id="resumePreview" class="resume-preview">
+        <!-- Resume content is injected here via script.js -->
+      </div>
+      <button id="downloadPDF" class="download-btn">Download as PDF</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Goldi | Created with ❤️</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
